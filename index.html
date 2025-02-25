@@ -1,59 +1,57 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Meta tags requeridos -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio JavaScript</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
 
-    <!-- CSS de Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <title>Hello, world!</title>
-  </head>
-  <body>
     <div class="container">
-        <!-- Sección de encabezado con un título -->
-        <div class="mt-4 p-5 bg-primary text-white rounded">
-            <div class="mt-4 p-5 bg-primary text-white rounded">
-               <h1>Crea tu página de contenido</h1>
-            </div>
-          </div>
         <div class="row">
-        <div class="col-3">
-            <!-- Menú de navegación con enlaces para crear diferentes tipos de contenido -->
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#" onclick="nuevoTitulo()">Título</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="" onclick="nuevoParrafo()" >Párrafo</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Imagen</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#" onclick="nuevoEnlace()">Enlace</a>
-                </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="#" onclick="imprimir()">Imprimir</a>
-                </li>
-              </ul>
-        </div>
-         <div class="col-8">
-            <!-- Textarea para ingresar texto -->
-            <div class="row">
-                <textarea name="" id="texto" rows="8"></textarea>
+            <div class="col-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" onclick="nuevoTitulo()">Título</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="nuevoParrafo()">Párrafo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="nuevoEnlace()">Enlace</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Imagen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="imprimir()">Imprimir</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-8">
+                <div class="mt-4 p-5 bg-primary text-white rounded">
+                    <h1>Crea tu página de contenido</h1>
                 </div>
-                <!-- Input de archivo para seleccionar una imagen -->
+
                 <div class="row">
-                <input type="file" id="imagen">
+                    <textarea id="texto" rows="4" class="form-control mt-3" placeholder="Escribe aquí..."></textarea>
                 </div>
-                <!-- Tarjeta para mostrar el contenido -->
-                <div class="card" id="contenido">                    
+
+                <div class="row mt-3">
+                    <input type="text" id="enlaceTexto" class="form-control" placeholder="Texto del enlace">
+                    <input type="text" id="enlaceURL" class="form-control mt-2" placeholder="URL del enlace">
                 </div>
+
+                <div class="row mt-3">
+                    <input type="file" id="imagen">
+                </div>
+
+                <div class="card mt-3 p-3" id="contenido"></div>
+            </div>
         </div>
-        </div>
-        <!-- Enlace al archivo JavaScript -->
-        <script src="js/contenido.js"></script>
-  </body>
+    </div>
+
+    <script src="js/contenido.js"></script>
+</body>
 </html>
